@@ -1,0 +1,1 @@
+<a href="10param_url.php?nomdupont&amp;prenom=Jean">Dire moi bonjour</a> 

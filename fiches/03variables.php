@@ -33,3 +33,10 @@
     echo "</br>";
     echo 'Bonjour ' . $myName . ', comment vas-tu?'; // Concaténation avec < . >
 ?>
+
+<?php 
+    $myVar = "tata";
+    echo $myVar;
+    echo('<br/>');
+    echo isset($myVar);
+?>
