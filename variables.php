@@ -1,5 +1,5 @@
 <?php
-    $recipes = [
+    $recipesStatic = [
         [
             'title' => 'Cassoulet',
             'recipe' => 'Etape 1 : des flageolets !',
@@ -20,7 +20,7 @@
         ],
     ];
 
-    $users = [
+    $usersStatic = [
         [
             'full_name' => 'Mickaël Andrieu',
             'email' => 'mika@gmail.com',
@@ -40,3 +40,18 @@
             'pass' => 'laurpass'
         ],
     ];
+
+    include_once(__DIR__ . '/database/databaseconnect.php');
+    // GET recipes
+    $sqlRecipesQuery = 'SELECT * FROM recipes WHERE is_enabled = :is_enabled';
+    $recipesStatement = $mysqlClient->prepare($sqlRecipesQuery);
+    $recipesStatement->execute([
+        'is_enabled' => 1,
+    ]);
+    $recipes = $recipesStatement->fetchAll();
+
+    // GET users
+    $sqlUsersQuery = 'SELECT * from users';
+    $usersStatement = $mysqlClient->prepare($sqlUsersQuery);
+    $usersStatement->execute();
+    $users = $usersStatement->fetchAll();

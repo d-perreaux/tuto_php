@@ -1,3 +1,8 @@
+<?php
+    require_once(__DIR__ . '../variables.php');
+    require_once(__DIR__ . '../fonctions.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
