@@ -2,7 +2,7 @@
 
 session_start();
 require_once(__DIR__ . '/variables.php');
-require_once(__DIR__ . '/fonctions.php');
+require_once(__DIR__ . '/functions.php');
 
 $postData = $_POST;
 

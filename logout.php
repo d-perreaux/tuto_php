@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-require_once(__DIR__ . '/fonctions.php');
+require_once(__DIR__ . '/functions.php');
 session_destroy();
 setcookie(
     'LOGGED_USER',
